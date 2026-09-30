@@ -1,0 +1,40 @@
+{
+  "name": "newproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "node start.js",
+    "build": "electron-builder --win --x64",
+    "test": "node --test test/adb_catalog.test.js test/android_adapter.test.js test/adb_extraction_scope.test.js test/adb_wifi.test.js test/android_connection.test.js test/android_media_inventory.test.js test/android_gallery_rpa.test.js test/android_observed_session.test.js test/android_action_runner.test.js test/whatsapp_catalog.test.js test/whatsapp_domain.test.js test/whatsapp_artifact_validator.test.js test/whatsapp_dom_parser.test.js test/syntax.test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "pdfkit": "^0.18.0",
+    "playwright": "^1.59.1",
+    "qrcode-terminal": "^0.12.0"
+  },
+  "devDependencies": {
+    "electron": "^41.5.0",
+    "electron-builder": "^26.8.1"
+  },
+  "build": {
+    "appId": "com.forensicsuite.app",
+    "productName": "Forensic Data Extractor Suite",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": "nsis"
+    },
+    "extraResources": [
+      {
+        "from": "bin",
+        "to": "bin"
+      }
+    ]
+  }
+}

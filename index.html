@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forensic</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="license-overlay" class="overlay-container">
+        <div class="license-dialog">
+            <div class="brand-mark large"></div>
+            <span class="eyebrow">Forensic Suite</span>
+            <h2>Activaci&oacute;n de licencia</h2>
+            <p>Introduce la clave de licencia para acceder a la suite.</p>
+            <input type="text" id="license-key-input" class="cyber-input" placeholder="XXXX-XXXX-XXXX-XXXX">
+            <button id="btn-activate-license" class="cyber-button primary">Verificar licencia</button>
+            <div id="license-error" class="error-text hidden">Licencia inv&aacute;lida o expirada.</div>
+        </div>
+    </div>
+
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="brand-mark"></div>
+                <div><strong>Forensic</strong></div>
+            </div>
+
+            <div class="sidebar-label">Módulos</div>
+            <nav class="nav-menu" aria-label="Navegaci&oacute;n principal">
+                <a href="#" class="nav-item active" data-target="dashboard"><span class="nav-icon">⌂</span><span>Resumen</span></a>
+                <a href="#" class="nav-item" data-target="adb"><span class="nav-icon">▣</span><span>Android</span></a>
+                <a href="#" class="nav-item" data-target="whatsapp"><span class="nav-icon">▤</span><span>WhatsApp Web</span></a>
+                <a href="#" class="nav-item" data-target="settings"><span class="nav-icon">⚙</span><span>Ajustes</span></a>
+            </nav>
+
+            <div class="sidebar-spacer"></div>
+            <div class="case-mini-card">
+                <div class="sidebar-label">Caso local</div>
+                <strong>LAB-2026-009</strong>
+                <span class="status-inline ok"><i></i> Datos locales</span>
+            </div>
+            <div class="license-status"><span class="status-dot"></span><span>Licencia activa</span></div>
+        </aside>
+
+        <main class="content-area">
+            <header class="top-bar">
+                <div>
+                    <div class="breadcrumb">Forensic <span>/</span> WhatsApp Web</div>
+                    <h1 id="page-title">WhatsApp Web</h1>
+                </div>
+                <div class="top-context">
+                    <span class="context-pill"><i class="status-dot small"></i> Trabajo local</span>
+                    <button type="button" class="context-pill context-settings route-link" data-target="settings">Ajustes</button>
+                </div>
+            </header>
+
+            <div class="scroll-container">
+                <section id="dashboard" class="view-section">
+                    <div class="page-intro">
+                        <div>
+                            <span class="eyebrow">Caso LAB-2026-009</span>
+                            <h2>Una vista clara de tu sesi&oacute;n</h2>
+                            <p>Selecciona un dispositivo, inicia una operaci&oacute;n y conserva sus resultados en un expediente local.</p>
+                        </div>
+                        <span class="state-badge neutral">Sin operaci&oacute;n activa</span>
+                    </div>
+
+                    <div class="summary-grid">
+                        <article class="summary-card primary-summary">
+                            <div class="summary-card-head"><span>Dispositivo de trabajo</span><span class="state-badge warning">Pendiente</span></div>
+                            <div class="summary-main"><div class="device-glyph">▯</div><div><strong>Conecta o consulta un Android</strong><span>El dispositivo aparecer&aacute; en el m&oacute;dulo Android.</span></div></div>
+                            <button class="cyber-button secondary route-link" data-target="adb" type="button">Abrir Android</button>
+                        </article>
+                        <article class="summary-card"><span class="card-kicker">Archivos capturados</span><strong class="summary-value">0</strong><span class="summary-muted">En este expediente</span></article>
+                        <article class="summary-card"><span class="card-kicker">Hashes generados</span><strong class="summary-value">0</strong><span class="summary-muted">Integridad pendiente</span></article>
+                    </div>
+
+                    <div class="content-grid two-columns">
+                        <article class="surface-card">
+                            <div class="card-heading"><div><span class="eyebrow">Rutas de trabajo</span><h3>Elige qu&eacute; quieres hacer</h3></div></div>
+                            <div class="workflow-list">
+                                <button class="workflow-item route-link" data-target="adb" type="button"><span class="workflow-icon teal">↳</span><span><strong>Respaldar Android</strong><small>Galer&iacute;a, descargas y multimedia autorizada.</small></span><b>→</b></button>
+                                <button class="workflow-item route-link" data-target="whatsapp" type="button"><span class="workflow-icon blue">▤</span><span><strong>Auditar WhatsApp Web</strong><small>Selecciona chats y conserva evidencia visual.</small></span><b>→</b></button>
+                                <button class="workflow-item route-link" data-target="adb" type="button"><span class="workflow-icon violet">⌘</span><span><strong>Aprender ADB</strong><small>Explora el laboratorio sin tocar el dispositivo.</small></span><b>→</b></button>
+                            </div>
+                        </article>
+                        <article class="surface-card">
+                            <div class="card-heading"><div><span class="eyebrow">Actividad</span><h3>Estado de la sesi&oacute;n</h3></div></div>
+                            <div class="empty-state compact"><div class="empty-icon">○</div><strong>A&uacute;n no hay operaciones</strong><span>Las capturas, respaldos y hashes aparecer&aacute;n aqu&iacute;.</span></div>
+                        </article>
+                    </div>
+                </section>
+
+                <section id="adb" class="view-section">
+                    <div class="page-intro">
+                        <div><span class="eyebrow">Android / Dispositivo</span><h2>Respaldo y observaci&oacute;n</h2><p>Primero valida el dispositivo. Despu&eacute;s elige una operaci&oacute;n concreta.</p></div>
+                        <span class="state-badge real">DISPOSITIVO REAL</span>
+                    </div>
+
+                    <article class="device-banner surface-card">
+                        <div class="device-banner-main"><div class="device-glyph large">▯</div><div><span class="eyebrow">Dispositivo de trabajo</span><h3 id="device-banner-title">Consulta dispositivos para comenzar</h3><p id="android-status">ADB pendiente de validaci&oacute;n.</p></div></div>
+                        <div class="device-banner-meta"><span class="connection-state"><i></i><b>ADB</b> separado del respaldo</span></div>
+                    </article>
+
+                    <div class="adb-layout">
+                        <div class="adb-main-column">
+                            <article class="surface-card connection-card">
+                                <div class="card-heading"><div><span class="eyebrow">Preparaci&oacute;n</span><h3>Conectar dispositivo</h3><p>Configura ADB una sola vez. El respaldo y el mirroring usar&aacute;n esta conexi&oacute;n.</p></div><span id="android-connection-badge" class="state-badge muted">SIN CONEXI&Oacute;N</span></div>
+                                <div class="form-grid two">
+                                    <div class="form-group"><label for="android-device-select">Dispositivo autorizado</label><select id="android-device-select" class="cyber-input"><option value="">Consulta dispositivos primero</option></select><small id="android-device-help">La lista se filtra por transporte; cada opcion muestra su estado. Solo <code>device</code> permite operar.</small></div>
+                                    <div class="form-group"><label for="adb-method">Transporte</label><select id="adb-method" class="cyber-input"><option value="usb">Cable USB</option><option value="wifi-paired">Wi-Fi ya emparejado</option><option value="wifi-new">Emparejar por Wi-Fi</option></select><small>USB es la ruta recomendada para la primera validaci&oacute;n.</small></div>
+                                </div>
+                                <div id="wifi-config" class="wifi-config hidden">
+                                    <div id="wifi-pair-fields" class="form-grid two">
+                                        <div class="form-group"><label for="adb-pair-ip">Direcci&oacute;n de emparejamiento</label><input type="text" id="adb-pair-ip" class="cyber-input" placeholder="192.168.1.8:37123" autocomplete="off"><small>La direcci&oacute;n temporal de &ldquo;Emparejar con c&oacute;digo&rdquo;.</small></div>
+                                        <div class="form-group"><label for="adb-pair-code">C&oacute;digo de emparejamiento</label><input type="text" id="adb-pair-code" class="cyber-input" inputmode="numeric" maxlength="6" placeholder="123456" autocomplete="off"><small>Se usa una sola vez para vincular este equipo.</small></div>
+                                    </div>
+                                    <div id="wifi-connect-field" class="form-group"><label for="adb-ip">Direcci&oacute;n de conexi&oacute;n</label><input type="text" id="adb-ip" class="cyber-input" placeholder="192.168.1.8:42123" autocomplete="off"><small>La direcci&oacute;n principal de &ldquo;Depuraci&oacute;n inal&aacute;mbrica&rdquo;; el puerto puede ser distinto.</small></div>
+                                    <div class="wifi-config-note">El c&oacute;digo solo se usa al emparejar por primera vez. Si el dispositivo ya aparece como <code>device</code>, usa su IP y puerto detectados; no vuelvas a introducir el c&oacute;digo. El QR se puede completar desde Android Studio.</div>
+                                </div>
+                                <div class="connection-actions"><button id="btn-android-refresh" class="cyber-button secondary"><span>Consultar dispositivos</span></button><button id="btn-android-connect" class="cyber-button primary"><span>Preparar conexi&oacute;n</span></button></div>
+                                <div id="android-connection-status" class="operation-status idle">A&uacute;n no se ha validado una conexi&oacute;n ADB.</div>
+                                <pre id="android-connection-output" class="terminal-body connection-output">Elige USB o Wi-Fi y prepara la conexi&oacute;n.</pre>
+                            </article>
+
+                            <article class="surface-card operation-card">
+                                <div class="card-heading"><div><span class="eyebrow">Operaci&oacute;n principal</span><h3>Crear respaldo controlado</h3><p>La fuente ya est&aacute; conectada. Ahora limita la prueba y revisa el progreso.</p></div><span class="step-chip">02 / 03</span></div>
+                                <div class="stepper"><span class="active"><b>01</b>Conectar</span><span class="active"><b>02</b>Revisar</span><span><b>03</b>Ejecutar</span></div>
+                                <div class="safe-mode-row"><div><strong>Prueba controlada</strong><small>Como m&aacute;ximo 2 archivos por fuente. Una ruta fallida se omite sin bloquear el caso.</small></div><label class="switch"><input type="checkbox" id="adb-test-mode" checked><span class="slider round"></span></label></div>
+                                <div class="safe-mode-row"><div><strong>Incluir elementos en papelera</strong><small>Se conserva activado para intentar recuperar archivos borrados que sigan accesibles en el almacenamiento.</small></div><label class="switch"><input type="checkbox" id="adb-include-trash" checked><span class="slider round"></span></label></div>
+                                <div class="safe-mode-row"><div><strong>Incluir miniaturas</strong><small>Desactivado por defecto: son copias derivadas y pueden multiplicar el tama&ntilde;o del respaldo.</small></div><label class="switch"><input type="checkbox" id="adb-include-thumbnails"><span class="slider round"></span></label></div>
+                                <div class="checkpoint-row"><div><strong>Checkpoint 01 · Inventario multimedia</strong><small>Descubre carpetas con im&aacute;genes y v&iacute;deos sin copiar archivos.</small></div><button id="btn-android-discover-media" class="cyber-button secondary" disabled>Descubrir carpetas</button></div>
+                                <div id="android-media-inventory-status" class="operation-status idle">Prepara la conexi&oacute;n para consultar las rutas del dispositivo.</div>
+                                <pre id="android-media-inventory-output" class="terminal-body media-inventory-output">Todav&iacute;a no se ha ejecutado el inventario multimedia.</pre>
+                                <button id="btn-start-adb" class="cyber-button primary action-button" disabled><span>Iniciar respaldo controlado</span></button>
+                                <div id="adb-extraction-status" class="operation-status idle">Listo. Esta operaci&oacute;n copiar&aacute; archivos del dispositivo seleccionado.</div>
+                                <pre id="adb-extraction-output" class="terminal-body adb-extraction-output">A&uacute;n no se ha iniciado un respaldo.</pre>
+                            </article>
+
+                            <article class="surface-card evidence-card">
+                                <div class="card-heading"><div><span class="eyebrow">Evidencia puntual</span><h3>Capturar el estado actual</h3><p>Estas acciones no sustituyen un respaldo completo; crean artefactos independientes.</p></div></div>
+                                <div class="action-cards">
+                                    <div class="action-card"><span class="action-icon">▧</span><strong>Captura PNG</strong><small>Una imagen de la pantalla actual.</small><button id="btn-android-screenshot" class="cyber-button secondary">Capturar pantalla</button></div>
+                                    <div class="action-card"><span class="action-icon">●</span><strong>Grabaci&oacute;n corta</strong><small>Video de 10 segundos con hash.</small><button id="btn-android-record" class="cyber-button secondary">Grabar 10 s</button></div>
+                                    <div class="action-card"><span class="action-icon">≡</span><strong>Plan de respaldo</strong><small>Revisa rutas sin copiar archivos.</small><button id="btn-android-backup-plan" class="cyber-button ghost">Ver plan</button></div>
+                                </div>
+                                <pre id="android-evidence-output" class="terminal-body android-evidence-output">Esperando una operaci&oacute;n de evidencia...</pre>
+                            </article>
+                        </div>
+
+                        <aside class="adb-side-column">
+                            <article class="surface-card mode-card"><div class="card-heading"><div><span class="eyebrow">Entorno</span><h3>Dispositivo real</h3></div><span class="state-badge real">ADB</span></div><div class="mode-note">Las operaciones requieren un tel&eacute;fono autorizado en estado <code>device</code>. El serial seleccionado se conserva en los registros.</div></article>
+                            <article class="surface-card mirror-card"><div class="card-heading"><div><span class="eyebrow">Observaci&oacute;n visual</span><h3>Mirroring</h3><p>Abre la vista del tel&eacute;fono real en una ventana externa.</p></div></div><label class="session-record-toggle"><input type="checkbox" id="android-mirror-record" checked> <span>Grabar esta sesi&oacute;n</span></label><label class="session-record-toggle"><input type="checkbox" id="android-mirror-stay-awake" checked> <span>Mantener pantalla activa</span></label><div class="mirror-actions"><button id="btn-android-mirror" class="cyber-button primary" disabled><span>Abrir mirroring</span></button><button id="btn-android-stop" class="cyber-button danger" disabled><span>Detener</span></button></div></article>
+                            <article class="surface-card observed-card"><div class="card-heading"><div><span class="eyebrow">Flujo coordinado</span><h3>Sesi&oacute;n observada</h3><p>Combina mirroring, grabaci&oacute;n visual y respaldo ADB en una sola carpeta.</p></div><span class="step-chip">01 / 01</span></div><div class="session-options"><label><input type="checkbox" id="android-session-record" checked> <span>Grabar mirroring</span></label><label><input type="checkbox" id="android-session-stay-awake" checked> <span>Mantener pantalla activa</span></label><label><input type="checkbox" id="android-session-backup" checked> <span>Ejecutar respaldo ADB</span></label><label><input type="checkbox" id="android-session-screenshots" checked> <span>Capturas de inicio y cierre</span></label></div><button id="btn-android-observed-session" class="cyber-button primary action-button" disabled><span>Iniciar sesi&oacute;n observada</span></button><button id="btn-android-stop-observed-session" class="cyber-button danger action-button" disabled><span>Cancelar sesi&oacute;n</span></button><div id="android-observed-session-status" class="operation-status idle">La sesi&oacute;n crear&aacute; una carpeta propia y conservar&aacute; su manifiesto.</div><pre id="android-observed-session-output" class="terminal-body observed-session-output">Esperando una sesi&oacute;n...</pre></article>
+                            <article class="surface-card action-runner-card"><div class="card-heading"><div><span class="eyebrow">Control guiado</span><h3>Acci&oacute;n m&oacute;vil</h3><p>Prueba una acci&oacute;n acotada mientras el mirroring est&aacute; abierto.</p></div></div><div class="form-group"><label for="android-action-type">Acci&oacute;n permitida</label><select id="android-action-type" class="cyber-input"><option value="tap">Tap</option><option value="swipe">Deslizamiento</option><option value="wait">Esperar</option><option value="back">Atr&aacute;s</option><option value="home">Inicio</option><option value="screenshot">Captura</option></select></div><div id="android-tap-fields" class="form-grid two"><div class="form-group"><label for="android-action-x">X</label><input id="android-action-x" class="cyber-input" type="number" min="0" max="10000" value="540"></div><div class="form-group"><label for="android-action-y">Y</label><input id="android-action-y" class="cyber-input" type="number" min="0" max="10000" value="1170"></div></div><div id="android-swipe-fields" class="form-grid two hidden"><div class="form-group"><label for="android-action-x1">X inicial</label><input id="android-action-x1" class="cyber-input" type="number" min="0" max="10000" value="540"></div><div class="form-group"><label for="android-action-y1">Y inicial</label><input id="android-action-y1" class="cyber-input" type="number" min="0" max="10000" value="1800"></div><div class="form-group"><label for="android-action-x2">X final</label><input id="android-action-x2" class="cyber-input" type="number" min="0" max="10000" value="540"></div><div class="form-group"><label for="android-action-y2">Y final</label><input id="android-action-y2" class="cyber-input" type="number" min="0" max="10000" value="500"></div></div><div id="android-action-duration-group" class="form-group hidden"><label for="android-action-duration">Duraci&oacute;n / espera en milisegundos</label><input id="android-action-duration" class="cyber-input" type="number" min="50" max="10000" value="500"></div><div id="android-action-label-group" class="form-group hidden"><label for="android-action-label">Nombre de captura</label><input id="android-action-label" class="cyber-input" type="text" maxlength="48" value="step_01"></div><button id="btn-android-action-run" class="cyber-button violet" disabled><span>Ejecutar acci&oacute;n</span></button><div id="android-action-status" class="operation-status idle">Abre el mirroring para habilitar el control guiado.</div><pre id="android-action-output" class="terminal-body action-output">Sin acciones ejecutadas.</pre></article>
+                            <article class="surface-card gallery-rpa-card"><div class="card-heading"><div><span class="eyebrow">Checkpoint 02</span><h3>RPA visual de Galer&iacute;a</h3><p>Usa selectores sem&aacute;nticos para abrir &ldquo;View all albums&rdquo;, hacer un scroll y guardar evidencia.</p></div><span class="state-badge neutral">ACOTADO</span></div><div class="mode-note">Para verlo en directo, abre el mirroring y deja Galer&iacute;a en su pantalla principal. Si no abres scrcpy, el flujo aun guardar&aacute; capturas locales.</div><button id="btn-android-gallery-rpa" class="cyber-button violet action-button" disabled>Explorar Galer&iacute;a (1 scroll)</button><div id="android-gallery-rpa-status" class="operation-status idle">Prepara la conexi&oacute;n para habilitar el checkpoint.</div><pre id="android-gallery-rpa-output" class="terminal-body gallery-rpa-output">Esperando ejecuci&oacute;n RPA...</pre></article>
+                        </aside>
+                    </div>
+
+                    <details class="advanced-section"><summary><span><b>Laboratorio avanzado</b><small>Comandos educativos y registro t&eacute;cnico</small></span><b class="details-arrow">⌄</b></summary>
+                        <div class="advanced-grid">
+                            <article class="surface-card"><div class="card-heading"><div><span class="eyebrow">Solo lectura</span><h3>Explorador educativo de ADB</h3><p>Relaciona cada comando con la capa de Android que consulta.</p></div></div><select id="adb-learning-command" class="cyber-input"><option value="">Cargando comandos...</option></select><div id="adb-learning-description" class="helper-text">Selecciona una operaci&oacute;n de solo lectura.</div><button id="btn-adb-learning-run" class="cyber-button secondary"><span>Ejecutar comando educativo</span></button><pre id="adb-learning-output" class="terminal-body">Esperando comando...</pre></article>
+                        </div>
+                    </details>
+
+                    <details class="technical-log"><summary><span><b>Registro t&eacute;cnico de la sesi&oacute;n</b><small>Comandos y mensajes completos</small></span><b class="details-arrow">⌄</b></summary><div id="terminal-output" class="terminal-body">[Sistema] Esperando comando...</div></details>
+                </section>
+
+                <section id="whatsapp" class="view-section">
+                    <div class="page-intro"><div><span class="eyebrow">WhatsApp Web / Auditor&iacute;a</span><h2>Revisi&oacute;n visual de chats</h2><p>Obt&eacute;n los chats desde una sesi&oacute;n de WhatsApp Web y selecciona qu&eacute; quieres documentar.</p></div><span class="state-badge neutral">M&oacute;dulo independiente</span></div>
+                    <nav id="wa-flow-nav" class="wa-flow-nav" aria-label="Flujo de respaldo">
+                        <button type="button" class="wa-flow-step active" data-wa-stage="connection"><b>01</b><span>Conectar</span><small>Sesión</small></button>
+                        <span class="wa-flow-line"></span>
+                        <button type="button" class="wa-flow-step" data-wa-stage="conversations"><b>02</b><span>Conversaciones</span><small>Selección</small></button>
+                        <span class="wa-flow-line"></span>
+                        <button type="button" class="wa-flow-step" data-wa-stage="extraction"><b>03</b><span>Expediente</span><small>Extraccion y resultados</small></button>
+                    </nav>
+                    <section id="wa-progress-panel" class="wa-progress-panel hidden" aria-live="polite">
+                        <div class="wa-progress-heading"><div><span class="eyebrow">Extracci&oacute;n en curso</span><h3 id="wa-progress-title">Preparando respaldo</h3><p id="wa-progress-message">Esperando la siguiente operaci&oacute;n.</p></div><span id="wa-progress-phase" class="state-badge neutral">PREPARANDO</span></div>
+                        <div class="wa-progress-track"><span id="wa-progress-bar"></span></div>
+                        <div class="wa-progress-meta"><span id="wa-progress-count">Conversaci&oacute;n 0 de 0</span><span id="wa-progress-percent">0%</span></div>
+                        <div class="wa-live-stats"><div><b id="wa-stat-messages">0</b><span>mensajes</span></div><div><b id="wa-stat-media">0</b><span>archivos</span></div><div><b id="wa-stat-current">—</b><span>actual</span></div></div>
+                        <div class="wa-live-stream">
+                            <div class="wa-live-stream-heading"><div><span class="eyebrow">Actividad en vivo</span><strong>Mensajes encontrados</strong></div><span class="wa-live-indicator"><i></i> EN VIVO</span></div>
+                            <div id="wa-live-message-list" class="wa-live-message-list"><div class="wa-live-empty">Esperando los primeros mensajes...</div></div>
+                            <div class="wa-live-loader"><span></span><span></span><span></span><small>Recorriendo el historial visible</small></div>
+                        </div>
+                    </section>
+                    <section id="wa-results-panel" class="wa-results-panel hidden" aria-live="polite">
+                        <div><span class="eyebrow wa-results-eyebrow">Resultado</span><h3>Respaldo completado</h3><p id="wa-results-message">La sesión terminó correctamente.</p></div>
+                        <div class="wa-result-actions"><button type="button" id="btn-wa-review-results" class="cyber-button secondary">Ver actividad t&eacute;cnica</button></div>
+                        <div class="wa-explorer">
+                            <aside class="wa-explorer-chats"><div class="wa-explorer-heading"><span class="eyebrow">Sesión local</span><strong>Conversaciones</strong></div><div id="wa-result-chat-list" class="wa-result-chat-list"><div class="wa-explorer-empty">Cargando expedientes...</div></div></aside>
+                            <section class="wa-explorer-messages"><div id="wa-result-chat-heading" class="wa-result-chat-heading"><span class="eyebrow">Vista de evidencia</span><h4>Selecciona una conversación</h4><small>Lectura local · sin edición</small></div><div id="wa-result-message-list" class="wa-result-message-list"><div class="wa-explorer-empty">Los mensajes aparecerán aquí.</div></div></section>
+                        </div>
+                    </section>
+                    <div id="wa-extraction-action" class="wa-extraction-action hidden">
+                        <div class="wa-action-command"><span class="eyebrow">Acci&oacute;n preparada</span><strong id="wa-action-title">Seleccionar conversaciones</strong><small id="wa-action-status">La extracci&oacute;n comenzar&aacute; despu&eacute;s de elegir las conversaciones.</small><button type="button" id="btn-wa-go-extraction" class="cyber-button secondary" disabled>Continuar a extracci&oacute;n</button><div id="wa-action-button-slot"></div></div>
+                        <div id="wa-options-slot" class="wa-options-slot"></div>
+                    </div>
+                    <div class="content-grid two-columns whatsapp-layout">
+                        <article id="wa-contact-stream-card" class="surface-card wa-contact-stream-card hidden">
+                            <div class="card-heading"><div><span class="eyebrow">Cat&aacute;logo en vivo</span><h3>Conversaciones encontradas</h3><p>Solo se est&aacute; leyendo la lista de chats; los mensajes se extraen despu&eacute;s.</p></div><span class="wa-live-indicator"><i></i> ESCANEANDO</span></div>
+                            <div id="wa-contact-stream-list" class="wa-contact-stream-list"><div class="wa-live-empty">Esperando la lista visible...</div></div>
+                            <div class="wa-console-heading"><span class="eyebrow">Terminal</span><span>Actividad del escaneo</span></div>
+                            <div id="wa-discovery-output" class="terminal-body wa-discovery-output">[INFO] Preparando cat&aacute;logo de conversaciones...</div>
+                            <div id="wa-right-extraction-action" class="wa-right-extraction-action hidden"></div>
+                            <div id="wa-options-card" class="wa-options-card">
+                                <div class="wa-console-heading"><span class="eyebrow">Alcance</span><span>Qu&eacute; guardar</span></div>
+                                <div class="wa-content-checks">
+                                    <label><input type="checkbox" id="wa-include-text" checked><span>Texto</span></label>
+                                    <label><input type="checkbox" id="wa-include-images" checked><span>Im&aacute;genes</span></label>
+                                    <label><input type="checkbox" id="wa-include-videos" checked><span>Videos</span></label>
+                                    <label><input type="checkbox" id="wa-include-audio" checked><span>Audio</span></label>
+                                    <label><input type="checkbox" id="wa-include-stickers" checked><span>Stickers</span></label>
+                                </div>
+                                <label class="wa-record-toggle"><input type="checkbox" id="wa-record-visual" checked><span>Grabar recorrido visual</span><small>Video de la navegaci&oacute;n visible.</small></label>
+                            </div>
+                        </article>
+                        <article class="surface-card wa-session-card"><div class="card-heading"><div><span class="eyebrow">Preparaci&oacute;n</span><h3>Conectar WhatsApp Web</h3><p>Abre un perfil persistente local para iniciar o reutilizar la sesi&oacute;n autorizada.</p></div><span id="wa-session-badge" class="state-badge neutral">SIN SESI&Oacute;N</span></div><div class="mode-note">La aplicaci&oacute;n abrir&aacute; el navegador visible. Si aparece un QR, escan&eacute;alo con el tel&eacute;fono; despu&eacute;s confirma la sesi&oacute;n desde aqu&iacute;.</div><div class="wa-session-actions"><button id="btn-wa-open-session" class="cyber-button secondary"><span>Abrir WhatsApp Web</span></button><button id="btn-wa-check-session" class="cyber-button primary" disabled><span>Comprobar sesi&oacute;n</span></button><button id="btn-wa-close-session" class="cyber-button danger" disabled><span>Cerrar navegador</span></button></div><div id="wa-session-status" class="operation-status idle">Abre el navegador para iniciar la sesi&oacute;n.</div><small id="wa-session-profile" class="helper-text">Perfil persistente: %USERPROFILE%\.forensic_whatsapp_session</small></article>
+                        <article class="surface-card operation-card"><div class="card-heading"><div><span class="eyebrow">Flujo guiado</span><h3>Preparar auditor&iacute;a</h3><p>La aplicaci&oacute;n abrir&aacute; el navegador y esperar&aacute; una sesi&oacute;n autorizada.</p></div><span class="step-chip">01 / 02</span></div><div class="safe-mode-row"><div><strong>Prueba controlada</strong><small>Extrae solo 2 saltos r&aacute;pidos por chat para validar el flujo.</small></div><label class="switch"><input type="checkbox" id="wa-test-mode" checked><span class="slider round"></span></label></div><div class="wa-step"><span class="step-number">1</span><div><strong>Obtener chats recientes</strong><small>Lee la lista visible para que puedas elegir manualmente.</small><button id="btn-get-contacts" class="cyber-button secondary"><span>Leer chats recientes</span></button></div></div><div id="contacts-container" class="wa-step hidden"><span class="step-number">2</span><div><strong>Seleccionar y extraer</strong><small>Marca los chats que quieres incluir en el expediente.</small><div class="contacts-table-wrap"><table id="contacts-table"><tbody></tbody></table></div><button id="btn-start-wa" class="cyber-button primary"><span>Iniciar auditor&iacute;a seleccionada</span></button></div></div></article>
+                        <article class="surface-card info-card"><div class="card-heading"><div><span class="eyebrow">Resultado esperado</span><h3>Un expediente por contacto</h3></div></div><div class="info-list"><div><b>CSV</b><span>Mensajes estructurados</span></div><div><b>PDF</b><span>Informe legible de la sesi&oacute;n</span></div><div><b>Video</b><span>Grabaci&oacute;n visual si est&aacute; configurada</span></div><div><b>Manifest</b><span>Hashes SHA-256 de archivos</span></div></div></article>
+                    </div>
+                    <details class="technical-log" open><summary><span><b>Registro de auditor&iacute;a</b><small>Estado del navegador y operaciones</small></span><b class="details-arrow">⌃</b></summary><div id="wa-terminal-output" class="terminal-body">[Sistema] Esperando una auditor&iacute;a...</div></details>
+                </section>
+
+                <section id="settings" class="view-section">
+                    <div class="page-intro"><div><span class="eyebrow">Configuraci&oacute;n</span><h2>Ajustes del espacio de trabajo</h2><p>Estado de licencia y ubicaciones locales de salida.</p></div></div>
+                    <div class="content-grid two-columns"><article class="surface-card settings-card"><div class="card-heading"><div><span class="eyebrow">Licencia</span><h3>Estado de activaci&oacute;n</h3></div><span class="state-badge success">Activa</span></div><div class="status-list"><div><span>Modo</span><b>Desarrollo local</b></div><div><span>Proveedor</span><b>Lemon Squeezy</b></div></div><button id="btn-deactivate" class="cyber-button danger">Desvincular dispositivo</button></article><article class="surface-card settings-card"><div class="card-heading"><div><span class="eyebrow">Archivos</span><h3>Ruta de evidencias</h3></div></div><p class="helper-text">Directorio principal donde se guardan respaldos, capturas, reportes y manifiestos.</p><code class="path-box">Desktop\Forensic_Extractions</code></article></div>
+                </section>
+            </div>
+        </main>
+    </div>
+    <script src="renderer.js"></script>
+</body>
+</html>

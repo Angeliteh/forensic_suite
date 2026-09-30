@@ -1,0 +1,18 @@
+node_modules/
+dist/
+Auditorias/
+Extraccion_Fisica_ADB/
+Forensic_Extractions/
+whatsapp_session/
+.forensic_whatsapp_session/
+*.log
+*.tmp
+*.mp4
+*.webm
+
+# Artefactos locales de WhatsApp Web; pueden contener mensajes o identificadores
+videos/
+dom_mensajes_muestra.html
+wppdom.html
+historial_prueba.csv
+master_index.csv

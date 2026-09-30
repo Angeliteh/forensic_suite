@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="es">
+  <body>
+    <main data-testid="conversation-panel-messages">
+      <div data-id="incoming-1">
+        <div data-testid="msg-container">
+          <div class="copyable-text" data-pre-plain-text="[01:03, 25/9/2026] Angelite: ">
+            <span aria-label="Angelite:"></span>
+            <span data-testid="selectable-text"><span>Hola desde el chat</span></span>
+          </div>
+          <div data-testid="msg-meta">01:03</div>
+          <span data-icon="tail-in"></span>
+        </div>
+      </div>
+
+      <div data-id="outgoing-1">
+        <div data-testid="msg-container">
+          <div class="copyable-text" data-pre-plain-text="[01:05, 25/9/2026] nexo invitaciones: ">
+            <span aria-label="Tú:"></span>
+            <div data-testid="quoted-message">
+              <span data-testid="author">Angelite</span>
+              <span data-testid="selectable-text">Mensaje citado</span>
+            </div>
+            <span data-testid="selectable-text"><span>Aqqqq</span></span>
+          </div>
+          <div data-testid="msg-meta">01:05</div>
+          <span data-icon="tail-out"></span>
+        </div>
+      </div>
+
+      <div data-id="group-1">
+        <div data-testid="msg-container">
+          <div class="copyable-text" data-pre-plain-text="[01:06, 25/9/2026] Carlos: ">
+            <span aria-label="Carlos:"></span>
+            <span data-testid="selectable-text"><span>Mensaje del grupo</span></span>
+          </div>
+          <div data-testid="msg-meta">01:06</div>
+          <span data-icon="tail-in"></span>
+        </div>
+      </div>
+
+      <div data-id="emoji-1">
+        <div data-testid="msg-container">
+          <div class="copyable-text" data-pre-plain-text="[01:07, 25/9/2026] Angelite: ">
+            <span aria-label="Angelite:"></span>
+            <span data-testid="selectable-text"><img alt="🙂" data-plain-text="🙂"></span>
+          </div>
+          <div data-testid="msg-meta">01:07</div>
+          <span data-icon="tail-in"></span>
+        </div>
+      </div>
+
+      <div data-id="deleted-1">
+        <div data-testid="msg-container">
+          <span data-testid="recalled"></span>
+          <span>Se eliminó este mensaje.</span>
+          <div data-testid="msg-meta">01:08</div>
+        </div>
+      </div>
+
+      <div data-id="sticker-1">
+        <div data-testid="msg-container">
+          <img src="blob:https://web.whatsapp.com/sticker-1" alt="Sticker sin etiquetas">
+          <video src="/media/test.mp4"></video>
+          <audio src="/media/test.ogg"></audio>
+          <div data-testid="msg-meta">01:09</div>
+          <span data-icon="tail-in"></span>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
